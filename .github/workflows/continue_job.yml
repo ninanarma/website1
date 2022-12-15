@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        version: [6, 7, 8 ]
+        version: [6]
         experimental: [false]
         include:
          - version: 9
