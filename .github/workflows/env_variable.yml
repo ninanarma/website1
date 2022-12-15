@@ -10,4 +10,4 @@ jobs:
       - name: "monday first working day"
         if: ${{ env.Day_Of_week == 'monday' }}
         run: echo "$ Greeting first day meeting $Day_Of_week"
-        
+       
