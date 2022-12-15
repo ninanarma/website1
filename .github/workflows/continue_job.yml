@@ -9,7 +9,7 @@ jobs:
       fail-fast: true
     steps:
           - name: running continues
-            run: npm install
+            run: npm -V
             
    
   test1:
