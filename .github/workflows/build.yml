@@ -1,19 +1,21 @@
-name: cron job and permission
-on:
- push: 
-   branches:
-     -main
- schedule:
-      - cron: 0 0 * * 0
+name: Node.js 
+
+on: 
+ push:
+  branches:
+      -main
 jobs:
   build:
-   runs-on: ubuntu-latest
-  steps:
-    uses: actions/checkout@v2
-    -name: Node.js
-     uses:actions/setup-node@v2
-  with:
-      node-version:"14.x"
-  run: npm install
-  run: npm test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '12.x'
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
    
