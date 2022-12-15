@@ -2,9 +2,9 @@ name: First Cron job
 on: 
   schedule:
     - cron: '*/5 * * * *'
-  jobs:
+jobs:
    cron:
-   runs-on: ubuntu-latest
-   steps:
-     -name: Run a online script
-      run: echo hello, world!
+    runs-on: ubuntu-latest
+    steps:
+     - name: Run a online script
+       run: echo  world!
