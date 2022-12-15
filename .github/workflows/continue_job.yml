@@ -1,10 +1,10 @@
 name: continues running jobs
 on:
- workflows_dispatch: {}
- jobs:
+ workflow_dispatch: {}
+jobs:
   test:
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.experimental }}
+    continue-on-error: ${{matrix.experimental}}
     strategy:
       fail-fast: true
       matrix:
