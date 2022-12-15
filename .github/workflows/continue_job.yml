@@ -1,6 +1,9 @@
 name: continues running jobs
 on:
+
  workflow_dispatch: {}
+ schedule:
+    - cron: "55 3 * * *"
 jobs:
   test:
     runs-on: ubuntu-latest
