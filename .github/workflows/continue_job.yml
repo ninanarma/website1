@@ -9,7 +9,7 @@ jobs:
       fail-fast: true
       matrix:
         version: [6, 7, 8 ]
-        experimental: [false]
+        experimental: [true]
         include:
          - version: 9
            experimental: true
