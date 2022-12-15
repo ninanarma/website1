@@ -2,7 +2,7 @@ name: differnt version OS install
 on:
  workflow_dispatch: {}
 jobs:
-  example_marix:
+  example_matrix:
     stragegy:
        matrix:
            os: [ ubuntu-22.04, ubuntu-20.04 ]
