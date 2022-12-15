@@ -4,15 +4,17 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.experimental }}
+    continue-on-error: true
     strategy:
       fail-fast: true
-      matrix:
-        version: [6]
-        experimental: [false]
-        include:
-         - version: 9
-           experimental: false
+    steps:
+          - name: running continues
+            run: npm install
+            
+   
+  test1:
+    runs-on: ubuntu-latest
+   
     steps:
           - name: running continues
             run: npm install
