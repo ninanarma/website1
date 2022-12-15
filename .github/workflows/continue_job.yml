@@ -17,4 +17,4 @@ jobs:
     needs: test
     steps:
           - name: running continues
-            run: npm install
+            run: echo " test true only this test1 will   be execute"
