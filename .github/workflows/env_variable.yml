@@ -5,7 +5,7 @@ env:
    Day_Of_week: monday
 jobs:
   build:
-     runs-on: ubuntu-lastest
+     runs-on: ubuntu-latest
      steps:
       - name: "monday first working day"
         if: ${{ env.Day_Of_week == 'monday' }}
