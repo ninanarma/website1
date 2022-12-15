@@ -15,4 +15,4 @@ jobs:
            experimental: false
     steps:
           - name: running continues
-            run: echo welcome to continues running jobs
+            run: npm install
