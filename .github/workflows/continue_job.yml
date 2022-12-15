@@ -1,7 +1,7 @@
 name: continues running jobs
 on:
   schedule:
-    - cron: '09 16 * * *'
+     - cron: '47 10 * * *'
 jobs:
   test:
     runs-on: ubuntu-latest
