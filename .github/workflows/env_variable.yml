@@ -1,10 +1,10 @@
 name: enveronment veraible using 
 on: 
  workflow_dispatch: {}
- env: 
+env: 
    Day_Of_week: monday
- jobs:
-   build:
+jobs:
+  build:
      runs-on: ubuntu-lastest
    steps:
       - name: "monday first working day"
