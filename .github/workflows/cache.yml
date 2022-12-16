@@ -1,5 +1,5 @@
 name: caching with npm
-on:
+on: push
 jobs: 
   build:
     runs-on: ubuntu-lastest 
