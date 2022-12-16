@@ -1,0 +1,31 @@
+name: caching with npm
+on:
+jobs: 
+  build:
+    runs-on: ubuntu-lastest 
+    steps:
+      - uses: actions/checkout@v3
+      - name: cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFile('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-${{ runner.os }}-build-${{ runner.os }}-
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: npm list
+        
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build
+        run: npm build
+        
+      - name: Test
+        run: npm test
+      
